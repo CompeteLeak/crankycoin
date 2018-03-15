@@ -25,6 +25,7 @@ def client():
         quit or exit
     '''
     encrypted = config['user']['encrypted_private_key']
+    print(encrypted)
     if encrypted is None:
         print("\n\nNo private key provided. A new wallet will be generated for you...\n\n")
         client = Client()
@@ -52,6 +53,7 @@ def client():
                 if len(cmd_split) == 2:
                     print(client.get_balance(cmd_split[1]))
                 else:
+                    print(client)
                     print(client.get_balance())
             elif cmd_split[0] == "send":
                 if len(cmd_split) == 4:

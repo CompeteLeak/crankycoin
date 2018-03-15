@@ -1,29 +1,25 @@
-user:
-    public_key:
-    encrypted_private_key:
-    ip: "127.0.0.1"
-    block_path:
 network:
-    name: "Cranky Coin"
-    ticker_symbol: "CRNK"
-    version: 1
-    initial_coins_per_block: 50
-    halving_frequency: 210000
-    max_transactions_per_block: 2000
-    minimum_hash_difficulty: 4
-    target_time_per_block: 600
-    difficulty_adjustment_span: 500
-    significant_digits: 8
-    full_node_port: 30013
-    nodes_url: "http://{}:{}/nodes"
-    transactions_url: "http://{}:{}/transactions"
-    block_url: "http://{}:{}/block/{}"
-    blocks_range_url: "http://{}:{}/blocks/{}/{}"
-    blocks_url: "http://{}:{}/blocks"
-    transaction_history_url: "http://{}:{}/address/{}/transactions"
-    balance_url: "http://{}:{}/address/{}/balance"
-    status_url: "http://{}:{}/status"
-    dns_seeds: []
-    seed_nodes:
-        - "127.0.0.1"
-        - "127.0.0.2"
+  balance_url: http://{}:{}/address/{}/balance
+  block_url: http://{}:{}/block/{}
+  blocks_range_url: http://{}:{}/blocks/{}/{}
+  blocks_url: http://{}:{}/blocks
+  client: None
+  difficulty_adjustment_span: 500
+  dns_seeds: []
+  full_node_port: 30013
+  halving_frequency: 210000
+  initial_coins_per_block: 50
+  max_transactions_per_block: 2000
+  minimum_hash_difficulty: 4
+  name: Cranky Coin
+  nodes_url: http://{}:{}/nodes
+  seed_nodes: [127.0.0.1, 127.0.0.2]
+  significant_digits: 8
+  status_url: http://{}:{}/status
+  target_time_per_block: 600
+  ticker_symbol: CRNK
+  transaction_history_url: http://{}:{}/address/{}/transactions
+  transactions_url: http://{}:{}/transactions
+  version: 1
+user: {block_path: null, encrypted_private_key: 6910940370b1a1e3e1a5aa8c9293d1df61ba3529b54fe2b69499538207ff12e624,
+  ip: 127.0.0.1, public_key: 03a0434d9e47f3c86235477c7b1ae6ae5d3442d49b1943c2b752a68e2a47e247c7}

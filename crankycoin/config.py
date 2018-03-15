@@ -6,4 +6,5 @@ with open("config/config.yaml", 'r') as ymlfile:
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+#client = None
 
