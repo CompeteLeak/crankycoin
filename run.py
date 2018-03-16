@@ -59,7 +59,7 @@ def client():
                 if len(cmd_split) == 4:
                     print(client.create_transaction(cmd_split[1], float(cmd_split[2]), float(cmd_split[3])))
                 else:
-                    print("\nRequires destination and amount\n")
+                    print("\nRequires destination, amount, and fee\n")
             elif cmd_split[0] == "publickey":
                 print(client.get_public_key())
             elif cmd_split[0] == "privatekey":

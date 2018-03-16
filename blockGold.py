@@ -118,10 +118,14 @@ def encrypt(passphrase, confirm, self, controller):
 
         combined = "{}{}{}".format(cipher.nonce, tag, ciphertext)
 
+        global client
+        client = Client()
+
         passphrase.delete(0, "end");
         confirm.delete(0, "end");
 
         config['user']['encrypted_private_key'] = combined.encode('hex')
+        config['user']['public_key'] = client.get_public_key()
         update()
 
         controller.show_frame(WalletPage)

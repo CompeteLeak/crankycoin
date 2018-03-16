@@ -16,7 +16,7 @@ class Client(NodeMixin):
         if private_key is not None:
             self.__private_key__ = coincurve.PrivateKey.from_hex(private_key)
         else:
-            logger.info("No private key provided. Generating new key pair.")
+            #logger.info("No private key provided. Generating new key pair.")
             self.__private_key__ = coincurve.PrivateKey()
         self.__public_key__ = self.__private_key__.public_key
 

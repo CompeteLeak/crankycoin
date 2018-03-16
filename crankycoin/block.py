@@ -100,6 +100,7 @@ class Block(object):
     def _calculate_merkle_root(self):
         if len(self._transactions) < 1:
             raise InvalidTransactions(self._index, "Zero transactions in block. Coinbase transaction required")
+        print(self._transactions)
         merkle_base = [t.tx_hash for t in self._transactions]
         while len(merkle_base) > 1:
             temp_merkle_base = []
