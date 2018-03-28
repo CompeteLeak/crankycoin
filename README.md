@@ -7,3 +7,4 @@ A Cryptocurrency by BlockGold
 2. Establish peer-to-peer network
 3. Finish Miner
 4. Create game to populate currency
+5. Check PrivateKey creation
