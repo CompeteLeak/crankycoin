@@ -4,6 +4,10 @@
     <list default="true" id="62a16fad-57db-4025-a8cd-b06a3172419a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/config/config.yaml" afterPath="$PROJECT_DIR$/config/config.yaml" />
+      <change beforePath="$PROJECT_DIR$/crankycoin/block.py" afterPath="$PROJECT_DIR$/crankycoin/block.py" />
+      <change beforePath="$PROJECT_DIR$/crankycoin/blockchain.py" afterPath="$PROJECT_DIR$/crankycoin/blockchain.py" />
+      <change beforePath="$PROJECT_DIR$/crankycoin/transaction.py" afterPath="$PROJECT_DIR$/crankycoin/transaction.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,36 +17,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" column="46" lean-forward="true" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
-              <folding>
-                <element signature="e#23#60#0" expanded="true" />
-                <element signature="e#4876#7076#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="decrypt.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/decrypt.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="config.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="391">
+              <caret line="23" column="114" lean-forward="false" selection-start-line="23" selection-start-column="114" selection-end-line="23" selection-end-column="114" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="encrypt.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/encrypt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+              <folding>
+                <element signature="e#23#60#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,45 +43,8 @@
       <file leaf-file-name="blockGold.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blockGold.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="block.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crankycoin/block.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="112" column="44" lean-forward="true" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="238">
-                <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="errors.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crankycoin/errors.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+            <state relative-caret-position="472">
+              <caret line="127" column="43" lean-forward="true" selection-start-line="127" selection-start-column="43" selection-end-line="127" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -97,8 +53,8 @@
       <file leaf-file-name="node.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="193" column="29" lean-forward="false" selection-start-line="193" selection-start-column="19" selection-end-line="193" selection-end-column="29" />
+            <state relative-caret-position="698">
+              <caret line="425" column="8" lean-forward="false" selection-start-line="425" selection-start-column="8" selection-end-line="425" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -107,19 +63,65 @@
       <file leaf-file-name="blockchain.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crankycoin/blockchain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="222" column="49" lean-forward="true" selection-start-line="222" selection-start-column="49" selection-end-line="222" selection-end-column="49" />
-              <folding />
+            <state relative-caret-position="459">
+              <caret line="45" column="55" lean-forward="false" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="transaction.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/transaction.py">
+        <entry file="file://$PROJECT_DIR$/crankycoin/transaction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="70" column="50" lean-forward="false" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="errors.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crankycoin/errors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="37" lean-forward="true" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wallet.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crankycoin/wallet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-442">
+              <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="decrypt.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/decrypt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="keys.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/coincurve/keys.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#127#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,21 +137,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cmd</find>
-      <find>self</find>
-      <find>balance</find>
-      <find>cipher</find>
-      <find>split</find>
-      <find>get_bal</find>
-      <find>callback</find>
-      <find>aes</find>
-      <find>tra</find>
-      <find>get_balance</find>
       <find>hashedpass</find>
       <find>_check_gen</find>
       <find>validate_blo</find>
       <find>mismatch</find>
-      <find>transaction</find>
       <find>config</find>
       <find>node_process</find>
       <find>nodemixin</find>
@@ -163,8 +154,19 @@
       <find>blocks_url</find>
       <find>client.get_public_key()</find>
       <find>global</find>
-      <find>signature</find>
       <find>print</find>
+      <find>calculate_merkle_root</find>
+      <find>transaction(</find>
+      <find>transaction</find>
+      <find>signature</find>
+      <find>tx_hash</find>
+      <find>get_valid_secret</find>
+      <find>from_hex</find>
+      <find>public_key</find>
+      <find>scalar</find>
+      <find>ecdh</find>
+      <find>get_</find>
+      <find>secret</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,19 +184,19 @@
         <option value="$PROJECT_DIR$/crankycoin/config.py" />
         <option value="$PROJECT_DIR$/node.py" />
         <option value="$PROJECT_DIR$/crankycoin/node.py" />
-        <option value="$PROJECT_DIR$/config/config.yaml" />
-        <option value="$PROJECT_DIR$/blockGold.py" />
-        <option value="$PROJECT_DIR$/crankycoin/transaction.py" />
-        <option value="$PROJECT_DIR$/crankycoin/block.py" />
-        <option value="$PROJECT_DIR$/transaction.py" />
         <option value="$PROJECT_DIR$/crankycoin/wallet.py" />
-        <option value="$PROJECT_DIR$/crankycoin/blockchain.py" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/crankycoin/block.py" />
+        <option value="$PROJECT_DIR$/transaction.py" />
+        <option value="$PROJECT_DIR$/crankycoin/blockchain.py" />
+        <option value="$PROJECT_DIR$/blockGold.py" />
+        <option value="$PROJECT_DIR$/config/config.yaml" />
+        <option value="$PROJECT_DIR$/crankycoin/transaction.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1167" />
@@ -220,8 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,12 +248,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="C:/crankycousin" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="SearchEverywhereHistoryKey" value="coinbase&#9;null&#9;null&#10;signature&#9;null&#9;null&#10;no private&#9;null&#9;null&#10;blocks_ur&#9;null&#9;null&#10;blockchain&#9;FILE&#9;file://C:/crankycoin/crankycoin/blockchain.py&#10;genesis&#9;null&#9;null&#10;Full&#9;null&#9;null&#10;process&#9;null&#9;null&#10;lock&#9;FILE&#9;file://C:/crankycoin/crankycoin/blockchain.py&#10;threading&#9;null&#9;null&#10;thr&#9;null&#9;null&#10;threadin&#9;null&#9;null&#10;syncma&#9;null&#9;null&#10;from_address&#9;null&#9;null&#10;syncmanager&#9;null&#9;null&#10;node_process&#9;null&#9;null&#10;_current&#9;null&#9;null&#10;current&#9;null&#9;null&#10;calculate_block&#9;null&#9;null&#10;tran&#9;FILE&#9;file://C:/crankycoin/crankycoin/transaction.py&#10;gen&#9;null&#9;null&#10;WARNING:&#9;null&#9;null&#10;encode&#9;null&#9;null&#10;get_balance&#9;null&#9;null&#10;split&#9;null&#9;null&#10;cmd_&#9;null&#9;null&#10;__public_key__&#9;null&#9;null&#10;public&#9;null&#9;null&#10;client&#9;null&#9;null&#10;decrypt&#9;null&#9;null&#10;getpass&#9;null&#9;null&#10;encryp&#9;null&#9;null" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="SearchEverywhereHistoryKey" value="client&#9;null&#9;null&#10;secret&#9;null&#9;null&#10;signature&#9;FILE&#9;file://C:/crankycoin/venv/Lib/site-packages/Cryptodome/Signature&#10;tx_hash&#9;null&#9;null&#10;txhash&#9;null&#9;null&#10;get_transaction&#9;null&#9;null&#10;coinbase&#9;null&#9;null&#10;no private&#9;null&#9;null&#10;blocks_ur&#9;null&#9;null&#10;blockchain&#9;FILE&#9;file://C:/crankycoin/crankycoin/blockchain.py&#10;genesis&#9;null&#9;null&#10;Full&#9;null&#9;null&#10;process&#9;null&#9;null&#10;lock&#9;FILE&#9;file://C:/crankycoin/crankycoin/blockchain.py&#10;threading&#9;null&#9;null&#10;thr&#9;null&#9;null&#10;threadin&#9;null&#9;null&#10;syncma&#9;null&#9;null&#10;from_address&#9;null&#9;null&#10;syncmanager&#9;null&#9;null&#10;node_process&#9;null&#9;null&#10;_current&#9;null&#9;null&#10;current&#9;null&#9;null&#10;calculate_block&#9;null&#9;null&#10;tran&#9;FILE&#9;file://C:/crankycoin/crankycoin/transaction.py&#10;gen&#9;null&#9;null&#10;WARNING:&#9;null&#9;null&#10;encode&#9;null&#9;null&#10;get_balance&#9;null&#9;null&#10;split&#9;null&#9;null&#10;cmd_&#9;null&#9;null&#10;__public_key__&#9;null&#9;null&#10;public&#9;null&#9;null&#10;decrypt&#9;null&#9;null&#10;getpass&#9;null&#9;null&#10;encryp&#9;null&#9;null" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="crankycoin" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="crankycoin" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -289,24 +299,6 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="block" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crankycoin" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="crankycoin" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crankycoin/block.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="blockGold" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -381,20 +373,38 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="transaction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\doug9\crankycoin\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="crankycoin" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/transaction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.block" />
-      <item index="1" class="java.lang.String" itemvalue="Python.node" />
-      <item index="2" class="java.lang.String" itemvalue="Python.encrypt" />
-      <item index="3" class="java.lang.String" itemvalue="Python.blockGold" />
-      <item index="4" class="java.lang.String" itemvalue="Python.blockchain" />
+      <item index="0" class="java.lang.String" itemvalue="Python.node" />
+      <item index="1" class="java.lang.String" itemvalue="Python.encrypt" />
+      <item index="2" class="java.lang.String" itemvalue="Python.blockGold" />
+      <item index="3" class="java.lang.String" itemvalue="Python.blockchain" />
+      <item index="4" class="java.lang.String" itemvalue="Python.transaction" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.blockGold" />
-        <item index="1" class="java.lang.String" itemvalue="Python.node" />
-        <item index="2" class="java.lang.String" itemvalue="Python.blockchain" />
-        <item index="3" class="java.lang.String" itemvalue="Python.encrypt" />
-        <item index="4" class="java.lang.String" itemvalue="Python.block" />
+        <item index="1" class="java.lang.String" itemvalue="Python.transaction" />
+        <item index="2" class="java.lang.String" itemvalue="Python.node" />
+        <item index="3" class="java.lang.String" itemvalue="Python.blockchain" />
+        <item index="4" class="java.lang.String" itemvalue="Python.encrypt" />
       </list>
     </recent_temporary>
   </component>
@@ -419,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521161230860</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed ReadMe">
+      <created>1521161585643</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1521161585643</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -432,18 +449,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1167" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26238146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24893162" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297769" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34044617" sideWeight="0.508547" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33846155" sideWeight="0.491453" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33753636" sideWeight="0.491453" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24151309" sideWeight="0.6720086" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4985451" sideWeight="0.6720086" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -451,6 +467,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -459,7 +476,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update ReadMe. Block.py Changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update ReadMe. Block.py Changes." />
+    <MESSAGE value="Fixed ReadMe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed ReadMe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -478,17 +496,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Simple-Merkle-Tree-in-Python/MerkleTrees.py" />
-    <entry file="file://$PROJECT_DIR$/crankycoin/blockchain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Simple-Merkle-Tree-in-Python/Bitcoin_example.png" />
-    <entry file="file://$USER_HOME$/Simple-Merkle-Tree-in-Python/merkle_tree_root.png" />
     <entry file="file://$USER_HOME$/Simple-Merkle-Tree-in-Python/SHA_256.png" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/twisted/internet/_win32stdio.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/gevent/builtins.py" />
@@ -525,7 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -540,13 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="71" column="6" lean-forward="false" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MerkleTrees.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="73" column="140" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="140" />
         </state>
       </provider>
     </entry>
@@ -572,16 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crankycoin/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#19#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/package.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -600,9 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -620,21 +606,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/encrypt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="28" />
-          <folding>
-            <element signature="e#23#60#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/block.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
           <caret line="61" column="15" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="394" column="0" lean-forward="false" selection-start-line="394" selection-start-column="0" selection-end-line="394" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -658,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-141">
           <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -666,7 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -674,7 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -682,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="706" column="35" lean-forward="true" selection-start-line="706" selection-start-column="35" selection-end-line="706" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -690,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,9 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4284">
           <caret line="252" column="37" lean-forward="true" selection-start-line="252" selection-start-column="37" selection-end-line="252" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,101 +688,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="327" column="0" lean-forward="false" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/decrypt.py">
+    <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="969">
+          <caret line="64" column="46" lean-forward="false" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+          <folding>
+            <element signature="e#23#60#0" expanded="false" />
+            <element signature="e#4876#7076#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crankycoin/transaction.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/asn1crypto/ocsp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="254">
+          <caret line="205" column="6" lean-forward="false" selection-start-line="205" selection-start-column="6" selection-end-line="205" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node.py">
+    <entry file="file://$PROJECT_DIR$/MerkleTrees.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="193" column="29" lean-forward="false" selection-start-line="193" selection-start-column="19" selection-end-line="193" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="1224">
+          <caret line="73" column="140" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="140" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crankycoin/errors.py">
+    <entry file="file://$PROJECT_DIR$/crankycoin/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crankycoin/wallet.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/asn1crypto/pkcs12.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-443">
-          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="254">
+          <caret line="163" column="6" lean-forward="false" selection-start-line="163" selection-start-column="6" selection-end-line="163" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/transaction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+          <caret line="72" column="24" lean-forward="true" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/coincurve/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="46" lean-forward="true" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
-          <folding>
-            <element signature="e#23#60#0" expanded="true" />
-            <element signature="e#4876#7076#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crankycoin/blockchain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="222" column="49" lean-forward="true" selection-start-line="222" selection-start-column="49" selection-end-line="222" selection-end-column="49" />
+        <state relative-caret-position="2176">
+          <caret line="134" column="42" lean-forward="false" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crankycoin/block.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="112" column="44" lean-forward="true" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blockGold.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -826,11 +756,99 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="238">
-            <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/coincurve/keys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/decrypt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crankycoin/errors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="true" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="425" column="8" lean-forward="false" selection-start-line="425" selection-start-column="8" selection-end-line="425" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="114" lean-forward="false" selection-start-line="23" selection-start-column="114" selection-end-line="23" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crankycoin/blockchain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="45" column="55" lean-forward="false" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crankycoin/transaction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="70" column="50" lean-forward="false" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/encrypt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+          <folding>
+            <element signature="e#23#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blockGold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="127" column="43" lean-forward="true" selection-start-line="127" selection-start-column="43" selection-end-line="127" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crankycoin/wallet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

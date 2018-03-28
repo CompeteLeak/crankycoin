@@ -43,6 +43,10 @@ class Blockchain(object):
             amount=3,
             fee=0,
         )
+        #print(config['user']['encrypted_private_key'])
+        genesis_transaction_one.sign(config['user']['encrypted_private_key'])
+        #genesis_transaction_two.sign(config['user']['encrypted_private_key'])
+        print(genesis_transaction_one)
         genesis_transactions = [genesis_transaction_one, genesis_transaction_two]
         genesis_block = Block(0, genesis_transactions, "", 0)
         return genesis_block
