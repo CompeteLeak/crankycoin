@@ -33,20 +33,23 @@ class Blockchain(object):
     def get_genesis_block(self):
         genesis_transaction_one = Transaction(
             source=0,
-            destination="02c42c36d28ab784349a3d83d2c02552d88c2d4319ac80146a271670b5f28c0e48",
+            destination="03921d3912da51563ec11361915ddfac6562822f2a456bcfb9a74cd040d6b257db",
             amount=3,
             fee=0,
         )
         genesis_transaction_two = Transaction(
             source=0,
-            destination="02c42c36d28ab784349a3d83d2c02552d88c2d4319ac80146a271670b5f28c0e48",
+            destination="03921d3912da51563ec11361915ddfac6562822f2a456bcfb9a74cd040d6b257db",
             amount=3,
             fee=0,
         )
-        #print(config['user']['encrypted_private_key'])
+
         genesis_transaction_one.sign(config['user']['encrypted_private_key'])
+
+        #print(config['user']['encrypted_private_key'])
+        #genesis_transaction_one.sign("67d4f1f8986dc48954b2f2d9a7e441b92fb9bf8259d15f9cf1e25c076b42166ca4f1a03e34f56f35fd198d258a927e5d19b96365e3b9e531571e14f0cc2f2038")
         #genesis_transaction_two.sign(config['user']['encrypted_private_key'])
-        print(genesis_transaction_one)
+        #print(genesis_transaction_one)
         genesis_transactions = [genesis_transaction_one, genesis_transaction_two]
         genesis_block = Block(0, genesis_transactions, "", 0)
         return genesis_block

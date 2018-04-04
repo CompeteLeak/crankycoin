@@ -111,7 +111,10 @@ def encrypt(passphrase, confirm, self, controller):
         errmessage1 = tk.Label(self, text="*** PASSPHRASEES DO NOT MATCH ***")
         errmessage1.grid(row="3", columnspan="2")
     else:
-        secret = "a"
+        secret = coincurve.utils.get_valid_secret()
+
+        print(secret)
+
         hashedpass = hashlib.sha256(passphrase.get()).digest()
         cipher = AES.new(hashedpass, AES.MODE_EAX)
         ciphertext, tag = cipher.encrypt_and_digest(secret)

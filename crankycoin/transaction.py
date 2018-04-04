@@ -2,6 +2,7 @@ import coincurve
 import hashlib
 import json
 import time
+from Cryptodome.Cipher import AES
 
 from errors import *
 
@@ -68,8 +69,7 @@ class Transaction(object):
         return hash_object.hexdigest()
 
     def sign(self, private_key):
-        coincurve.PrivateKey.from_hex(private_key)
-        signature = coincurve.PrivateKey.from_hex(private_key).sign(self.to_signable()).encode('hex')
+        signature = coincurve.PrivateKey().from_hex(private_key).sign(self.to_signable()).encode('hex')
         self._signature = signature
         self._tx_hash = self._calculate_tx_hash()
         return signature
