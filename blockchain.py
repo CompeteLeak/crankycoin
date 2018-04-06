@@ -228,6 +228,12 @@ class Blockchain(object):
                     balance += transaction.amount
         return balance
 
+    # def send_balance(self,address):
+    #     input = self.get("1.0",'end-1c')
+
+
+
+
     def find_duplicate_transactions(self, transaction_hash):
         for block in self.blocks:
             for transaction in block.transactions:

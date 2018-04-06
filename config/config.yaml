@@ -21,5 +21,5 @@ network:
   transaction_history_url: http://{}:{}/address/{}/transactions
   transactions_url: http://{}:{}/transactions
   version: 1
-user: {block_path: null, encrypted_private_key: c86d5f85a8bdf35b7af8983541de134ad327118fcc4415b439aa2d9d451c8b91a78ca7d46802717bb12cb06f14bbc6c66525765aa83db192f12f1d2d427607c8,
-  ip: 127.0.0.1, public_key: 03921d3912da51563ec11361915ddfac6562822f2a456bcfb9a74cd040d6b257db}
+user: {block_path: null, encrypted_private_key: 80fb3392e357ae658c087e66cab48ce2091a115fa318fe0d329a1a6d699791f7fdd8,
+  ip: 137.198.12.190, public_key: 03ae3379eb4dda60788119ce53274f8bc02f31b904a440551506ebedc0024aa7a2}

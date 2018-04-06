@@ -36,7 +36,7 @@ class BlockGold(tk.Tk):
 
         self.frames = {}
 
-        for F in (StartPage, LoginPage, NewUserPage, WalletPage):
+        for F in (StartPage, LoginPage, NewUserPage, WalletPage, SendPage):
 
             frame = F(container, self)
 
@@ -111,9 +111,8 @@ def encrypt(passphrase, confirm, self, controller):
         errmessage1 = tk.Label(self, text="*** PASSPHRASEES DO NOT MATCH ***")
         errmessage1.grid(row="3", columnspan="2")
     else:
-        secret = coincurve.utils.get_valid_secret()
-
-        print(secret)
+        #secret = coincurve.utils.get_valid_secret()
+        secret = "32"
 
         hashedpass = hashlib.sha256(passphrase.get()).digest()
         cipher = AES.new(hashedpass, AES.MODE_EAX)
@@ -184,7 +183,7 @@ class WalletPage(tk.Frame):
         balance = tk.Button(self, text="Balance", command=lambda: callback(self, balance))
         balance.grid(row=2, column=0)
 
-        sendcurrency = tk.Button(self, text="Send Nuggets: ")
+        sendcurrency = tk.Button(self, text="Send Nuggets: ", font=SMALL_FONT, command =lambda: controller.show_frame(SendPage))
         sendcurrency.grid(row=3, column=0)
         viewprivatekey = tk.Button(self, text="View my Private Key ", command=lambda: callback1(self, viewprivatekey))
         viewprivatekey.grid(row=2, column=1, columnspan=3)
@@ -192,6 +191,35 @@ class WalletPage(tk.Frame):
         viewpublickey.grid(row=3, column=1, columnspan=3)
         logout = tk.Button(self, text="logout", font=LARGE_FONT, command=lambda: controller.show_frame(StartPage))
         logout.grid(row=6, columnspan=3)
+
+
+class SendPage(tk.Frame):
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent,)
+
+        SendTo = tk.Label(self, text="Send Nuggets To This Public Key: ")
+        SendTo.grid(row=0, column=0)
+
+        SendTo1 = tk.Entry(self, bd=5)
+        SendTo1.grid(row=0, column=1)
+
+        AmmountTo = tk.Label(self, text="Enter Nuggets Amount to send: ")
+        AmmountTo.grid(row=2, column=0)
+
+        AmmountTo1 = tk.Entry(self, bd=5)
+        AmmountTo1.grid(row=2, column=1)
+
+        backbutton1 = tk.Button(self, text="Back", font=SMALL_FONT, command=lambda: controller.show_frame(WalletPage))
+        backbutton1.grid(row=4, columnspan=2)
+
+        SendButton = tk.Button(self, text="Send", font =SMALL_FONT)
+        SendButton.grid(row=5, columnspan=2)
+
+        TransactionHistory = tk.Button(self, text = "Transaction History", font =SMALL_FONT, command =lambda: client.get_transaction_history())
+        TransactionHistory.grid(row = 6, column = 2)
+
+
+
 
 
 app = BlockGold()

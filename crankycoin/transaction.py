@@ -13,7 +13,6 @@ class Transaction(object):
         self._source = source
         self._destination = destination
         self._amount = amount
-        print(amount)
         self._fee = fee
         self._timestamp = int(time.time())
         self._signature = signature
