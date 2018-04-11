@@ -33,14 +33,14 @@ class Blockchain(object):
     def get_genesis_block(self):
         genesis_transaction_one = Transaction(
             "0",
-            "036e1f0d10c93c0211658bb1118271a0c187fd6211e56b711e3ce358b5b8bc8a77",
+            "023326b3d4d9aa65f202920bb222611ad28b210093c9dff4fa1eb8787c1497941c",
             500000,
             0,
             ""
         )
         genesis_transaction_two = Transaction(
             "0",
-            "036e1f0d10c93c0211658bb1118271a0c187fd6211e56b711e3ce358b5b8bc8a77",
+            "023326b3d4d9aa65f202920bb222611ad28b210093c9dff4fa1eb8787c1497941c",
             500000,
             0,
             ""
