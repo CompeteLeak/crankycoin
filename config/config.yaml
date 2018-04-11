@@ -1,5 +1,6 @@
 network:
   balance_url: http://{}:{}/address/{}/balance
+  block_path: None
   block_url: http://{}:{}/block/{}
   blocks_range_url: http://{}:{}/blocks/{}/{}
   blocks_url: http://{}:{}/blocks/{}
@@ -21,5 +22,5 @@ network:
   transaction_history_url: http://{}:{}/address/{}/transactions
   transactions_url: http://{}:{}/transactions
   version: 1
-user: {block_path: null, encrypted_private_key: 80fb3392e357ae658c087e66cab48ce2091a115fa318fe0d329a1a6d699791f7fdd8,
-  ip: 137.198.12.190, public_key: 03ae3379eb4dda60788119ce53274f8bc02f31b904a440551506ebedc0024aa7a2}
+user: {block_path: null, encrypted_private_key: 930c9a7fcbbb3c2e75c629bca5c7789d57a9eb2469bc7bc08d5947a8e3626b85b4e7,
+  ip: 137.198.12.190, public_key: 0241fed874533da466dffd968ce22ffe8c5701514e49decfb52971b704595cd260}
