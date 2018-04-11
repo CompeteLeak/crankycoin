@@ -6,6 +6,7 @@ from Queue import Empty, Full
 
 from blockchain import *
 from transaction import *
+from config import *
 
 
 class NodeMixin(object):
@@ -86,10 +87,15 @@ class FullNode(NodeMixin):
         self.broadcast_node(host)
         self.full_nodes.add(host)
 
-        block_path = kwargs.get("block_path")
-        if block_path is None:
+        block_path = config['network']['block_path']
+        print(block_path)
+        if block_path is "None":
+            print("New Block Path")
             self.blockchain = Blockchain()
+            config['network']['block_path'] = self.blockchain
+            print("\n\nThe Block path: %s" % self.blockchain)
         else:
+            print("Old Block Path")
             self.load_blockchain(block_path)
 
         mining = kwargs.get("mining")
@@ -99,9 +105,9 @@ class FullNode(NodeMixin):
             self.mining_process.start()
             logger.debug("mining node started on %s with reward address of %s...", host, reward_address)
         logger.debug("full node server starting on %s with reward address of %s...", host, reward_address)
-        self.node_process = Process(target=self.app.run, args=(host, self.FULL_NODE_PORT))
-        self.node_process.start()
-        logger.debug("full node server started on %s with reward address of %s...", host, reward_address)
+        # self.node_process = Process(target=self.app.run, args=(host, self.FULL_NODE_PORT))
+        # self.node_process.start()
+        # logger.debug("full node server started on %s with reward address of %s...", host, reward_address)
 
     def shutdown(self, force=False):
         self.blockchain.unconfirmed_transactions.close()
