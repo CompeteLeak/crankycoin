@@ -127,7 +127,7 @@ def full():
                 else:
                     print(fullnode.blockchain.get_all_blocks())
             elif cmd_split[0] in ("quit", "exit"):
-                fullnode.shutdown(True)
+                # fullnode.shutdown(True)
                 sys.exit(0)
             else:  # help
                 print(helptext)

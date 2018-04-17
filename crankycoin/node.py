@@ -9,6 +9,11 @@ from transaction import *
 from config import *
 
 
+def update():
+    userdata = "config\config.yaml"
+    with open(userdata, "w") as f:
+        yaml.dump(config, f)
+
 class NodeMixin(object):
 
     FULL_NODE_PORT = config['network']['full_node_port']
@@ -89,11 +94,13 @@ class FullNode(NodeMixin):
 
         block_path = config['network']['block_path']
         print(block_path)
-        if block_path is "None":
+        if block_path == "None":
             print("New Block Path")
             self.blockchain = Blockchain()
-            config['network']['block_path'] = self.blockchain
-            print("\n\nThe Block path: %s" % self.blockchain)
+            config['network']['block_path'] = self.blockchain.blocks
+            update()
+            # print(config['network']['block_path'])
+            #print("\n\nThe Block path: %s" % self.blockchain)
         else:
             print("Old Block Path")
             self.load_blockchain(block_path)
@@ -292,6 +299,10 @@ class FullNode(NodeMixin):
         if host not in self.full_nodes:
             self.broadcast_node(host)
             self.full_nodes.add(host)
+            config['network']['seed_nodes'].append(host)
+            update()
+
+
 
     def broadcast_node(self, host):
         self.request_nodes_from_all()
@@ -314,8 +325,9 @@ class FullNode(NodeMixin):
         return
 
     def load_blockchain(self, block_path):
-        # TODO load blockchain from path
-        pass
+        self.blockchain = Blockchain()
+        self.blockchain.blocks = block_path
+        print(self.blockchain.blocks)
 
     def synchronize(self):
         my_latest_block = self.blockchain.get_latest_block()

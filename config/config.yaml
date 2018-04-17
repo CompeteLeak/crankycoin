@@ -1,6 +1,6 @@
 network:
   balance_url: http://{}:{}/address/{}/balance
-  block_path: None
+  block_path: [3ffeb28217261a2750e55f044202ab5e3ba5952ac34525babdfe0bad605c588e, 95d79ba70d1fa3143f2c7ac71b35f6539e34708f45777570e6215044f7f31a69]
   block_url: http://{}:{}/block/{}
   blocks_range_url: http://{}:{}/blocks/{}/{}
   blocks_url: http://{}:{}/blocks/{}
@@ -14,7 +14,7 @@ network:
   minimum_hash_difficulty: 4
   name: Cranky Coin
   nodes_url: http://{}:{}/nodes
-  seed_nodes: [127.0.0.1, 127.0.0.2]
+  seed_nodes: [127.0.0.1, 127.0.0.2, 127.0.0.3, 127.0.0.4]
   significant_digits: 8
   status_url: http://{}:{}/status
   target_time_per_block: 600
@@ -22,5 +22,5 @@ network:
   transaction_history_url: http://{}:{}/address/{}/transactions
   transactions_url: http://{}:{}/transactions
   version: 1
-user: {block_path: null, encrypted_private_key: 930c9a7fcbbb3c2e75c629bca5c7789d57a9eb2469bc7bc08d5947a8e3626b85b4e7,
-  ip: 137.198.12.190, public_key: 0241fed874533da466dffd968ce22ffe8c5701514e49decfb52971b704595cd260}
+user: {block_path: null, encrypted_private_key: 8547fb7fa1253461d1e2069bb8f703f0bcd76353a917a4f39933ede8c92ac5349437,
+  ip: 137.198.12.190, public_key: 0262efbea162c2cf367cfde91c40652dc658940534a638d880c3eed654f71bfcfd}

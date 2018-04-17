@@ -46,7 +46,8 @@ class Blockchain(object):
             ""
         )
         genesis_transactions = [genesis_transaction_one, genesis_transaction_two]
-        genesis_block = Block(0, genesis_transactions, "", 0)
+        genesis_block = Block(0, genesis_transactions, "")
+        Blockchain.blocks.append(genesis_block.current_hash)
         print("Genesis Block: " + str(genesis_block))
         return genesis_block
 

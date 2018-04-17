@@ -1,6 +1,6 @@
 import datetime
 import hashlib
-from transaction import *
+#from transaction import *
 
 
 class Block:
