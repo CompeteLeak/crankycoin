@@ -5,6 +5,8 @@ from multiprocessing import Lock, Manager
 from block import *
 from errors import *
 from transaction import *
+import socket 
+import coincurve 
 
 
 class Blockchain(object):
@@ -49,6 +51,7 @@ class Blockchain(object):
         genesis_block = Block(0, genesis_transactions, "")
         Blockchain.blocks.append(genesis_block.current_hash)
         print("Genesis Block: " + str(genesis_block))
+
         return genesis_block
 
     def _check_genesis_block(self, block):

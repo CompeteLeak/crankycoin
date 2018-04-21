@@ -12,7 +12,7 @@ from crankycoin import *
 import Tkinter as tk
 import random
 import requests
-
+import socket 
 # from config import *
 # from node import NodeMixin
 # from transaction import *
@@ -161,9 +161,25 @@ def callback(self, balance):
     balance.grid(row=2, column=0)
 
 
+
 def callback1(self, priK):
     priK = tk.Label(self, text=config['user']['encrypted_private_key'], font=LARGE_FONT)
     priK.grid(row=2, column=1, columnspan=3)
+
+def addMe(self, networkConnect ):
+    host = '10.0.2.15'
+    port = 5000
+
+    s = socket.socket()
+    s.connect((host, port))
+
+    fullnode.add_node()
+    while message != 'q ':
+            s.send(message)
+            data = s.recv(1024)
+            print ('Received from server' + str(data))
+            message = raw_input("->")
+    s.close()
 
 
 def callback2(self, pubK):
@@ -183,6 +199,8 @@ class WalletPage(tk.Frame):
         balance = tk.Button(self, text="Balance", command=lambda: callback(self, balance))
         balance.grid(row=2, column=0)
 
+        networkConnect =tk.Button(self, text = "Connect To BlockGold Network: ", command=lambda: addMe(self, networkConnect))
+        networkConnect.grid(row=7, column=0)
         sendcurrency = tk.Button(self, text="Send Nuggets: ", font=SMALL_FONT, command =lambda: controller.show_frame(SendPage))
         sendcurrency.grid(row=3, column=0)
         viewprivatekey = tk.Button(self, text="View my Private Key ", command=lambda: callback1(self, viewprivatekey))
