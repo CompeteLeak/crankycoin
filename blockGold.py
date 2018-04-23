@@ -19,6 +19,13 @@ import socket
 
 LARGE_FONT = ("Verdona", 12)
 SMALL_FONT = ("Verdona", 8)
+# ip = config['user']['ip']
+# ip = socket.gethostbyname(socket.gethostname())
+ip = '10.0.2.15'
+# print(ip)
+public_key = config['user']['public_key']
+fullnode = FullNode(ip, public_key)
+# window = Tk()
 
 
 class BlockGold(tk.Tk):
@@ -166,19 +173,34 @@ def callback1(self, priK):
     priK = tk.Label(self, text=config['user']['encrypted_private_key'], font=LARGE_FONT)
     priK.grid(row=2, column=1, columnspan=3)
 
-def addMe(self, networkConnect ):
+def viewPeers(self, pri):
+    pri = tk.Label(self, text=fullnode.full_nodes, font=LARGE_FONT)
+    pri.grid(row=2, column=1, columnspan=3)
+
+def addMe(self):
     host = '10.0.2.15'
     port = 5000
 
     s = socket.socket()
     s.connect((host, port))
-
-    fullnode.add_node()
-    while message != 'q ':
-            s.send(message)
-            data = s.recv(1024)
-            print ('Received from server' + str(data))
-            message = raw_input("->")
+    # fullnode.add_node('10.0.2.16')
+    data = s.recv(1024)
+    fullnode.add_node(data)
+    # c = s.accept()
+    s.send(host)
+    # print(fullnode.add_node(host))
+    # print(fullnode.full_nodes)
+    # message = raw_input("-> ")
+    # if message == 'a ':
+            # fullnode.add_node('10.0.2.16')
+            # print("node sucesfuly added" + str(fullnode.full_nodes))
+    #         s.close()
+    # while message != 'q ':
+    #         s.send(message)
+    #         data = s.recv(1024)
+    #         print ('Received from server' + str(data))
+    #         message = raw_input("->")
+    print("node sucesfuly added")
     s.close()
 
 
@@ -186,6 +208,9 @@ def callback2(self, pubK):
     pubK = tk.Label(self, text=config['user']['public_key'], font=LARGE_FONT)
     pubK.grid(row=3, column=1, columnspan=3)
 
+def refresh():
+    window.destroy()
+    execfile("blockGold.py",globals())
 
 class WalletPage(tk.Frame):
     def __init__(self, parent, controller):
@@ -197,18 +222,22 @@ class WalletPage(tk.Frame):
         #cmd_split = cmd.split()
         #
         balance = tk.Button(self, text="Balance", command=lambda: callback(self, balance))
-        balance.grid(row=2, column=0)
+        balance.grid(row=0, column=0)
 
-        networkConnect =tk.Button(self, text = "Connect To BlockGold Network: ", command=lambda: addMe(self, networkConnect))
-        networkConnect.grid(row=7, column=0)
+        networkConnect =tk.Button(self, text = "Connect To BlockGold Network: ", command=lambda: addMe(self))
+        networkConnect.grid(row=5, column=3)
         sendcurrency = tk.Button(self, text="Send Nuggets: ", font=SMALL_FONT, command =lambda: controller.show_frame(SendPage))
-        sendcurrency.grid(row=3, column=0)
+        sendcurrency.grid(row=1, column=0)
         viewprivatekey = tk.Button(self, text="View my Private Key ", command=lambda: callback1(self, viewprivatekey))
-        viewprivatekey.grid(row=2, column=1, columnspan=3)
+        viewprivatekey.grid(row=1, column=1, columnspan=3)
         viewpublickey = tk.Button(self, text="View my Public Key ", command=lambda: callback2(self, viewpublickey))
-        viewpublickey.grid(row=3, column=1, columnspan=3)
+        viewpublickey.grid(row=2, column=1, columnspan=3)
         logout = tk.Button(self, text="logout", font=LARGE_FONT, command=lambda: controller.show_frame(StartPage))
         logout.grid(row=6, columnspan=3)
+
+        fresh = tk.Button(self, text="Refresh", font=LARGE_FONT, command=lambda: refresh())
+        fresh.grid(row=7, columnspan=3)
+
 
 
 class SendPage(tk.Frame):
@@ -235,6 +264,8 @@ class SendPage(tk.Frame):
 
         TransactionHistory = tk.Button(self, text = "Transaction History", font =SMALL_FONT, command =lambda: client.get_transaction_history())
         TransactionHistory.grid(row = 6, column = 2)
+        viewP = tk.Button(self, text="View Peers on the network ", command=lambda: viewPeers(self, viewP))
+        viewP.grid(row=8, column=0, columnspan=3)
 
 
 

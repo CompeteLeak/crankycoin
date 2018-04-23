@@ -17,6 +17,11 @@ import requests
 # from node import NodeMixin
 # from transaction import *
 import socket 
+ip = '10.0.2.15'
+# print(ip)
+public_key = config['user']['public_key']
+fullnode = FullNode(ip, public_key)
+
 
 
 def Main():
@@ -28,6 +33,7 @@ def Main():
 
 		s.listen(1)
 		c, addr = s.accept()
+		# print(fullnode.add_node(host))
 		print ("Got Conecttion From: " + str(addr))
 		while True: 
 				data =c.recv(1024)

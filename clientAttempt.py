@@ -19,7 +19,7 @@ import requests
 # from transaction import *
 
 def main(): 
-		host = '127.0.0.1'
+		host = '10.0.2.15'
 		port = 5000
 
 		s = socket.socket()
