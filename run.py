@@ -77,7 +77,8 @@ def client():
             pass
 
 def connect():
-        host = '10.0.2.15'
+        # host = '10.0.2.15'
+        host =  '137.198.12.190'
         port = 5000
 
         ip = '10.0.2.15'
@@ -94,7 +95,10 @@ def connect():
         # print ("Got Conecttion From: " + str(addr))
         c.send(myaddr)
         data = c.recv(1024)
+        print("\n\n\n\n")
+        print(fullnode.full_nodes)
         fullnode.add_node(data)
+        print(fullnode.full_nodes)
         print("Node Added" + str(data))
         # data = s.recv(1024)
         # fullnode.add_node(data)
@@ -133,7 +137,6 @@ def full():
     else:
         print("\n\nfull node starting...\n\n")
         fullnode = FullNode(ip, public_key)
-        connect() 
         # host1 = '10.0.2.15'
         # print(fullnode.add_node(host1))
 
@@ -143,6 +146,8 @@ def full():
         try:
             if cmd_split[0] == "synchronize":
                 print(fullnode.synchronize())
+            elif cmd_split[0] == "addpeer":
+                connect() 
             elif cmd_split[0] == "addnode":
                 if len(cmd_split) == 2:
                     print(fullnode.add_node(cmd_split[1]))

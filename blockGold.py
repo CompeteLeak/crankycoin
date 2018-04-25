@@ -88,7 +88,7 @@ def login(self, passphrase, controller):
         passphrase.delete(0, "end")
         controller.show_frame(WalletPage)
     except ValueError as ve:
-        errmessage = tk.Label(self, text="*** PASSPHRASEES DO NOT MATCH ***")
+        errmessage = tk.Label(self, text="*** PASSPHRASES DO NOT MATCH ***")
         errmessage.grid(row="2", columnspan="2")
 
 
@@ -165,17 +165,17 @@ def callback(self, balance):
     if amount is None:
         amount = 0
     balance = tk.Label(self, text=str(amount)+" Nugget(s)", font=LARGE_FONT)
-    balance.grid(row=2, column=0)
+    balance.grid(row=0, column=0)
 
 
 
 def callback1(self, priK):
     priK = tk.Label(self, text=config['user']['encrypted_private_key'], font=LARGE_FONT)
-    priK.grid(row=2, column=1, columnspan=3)
+    priK.grid(row=1, column=1, columnspan=3)
 
 def viewPeers(self, pri):
     pri = tk.Label(self, text=fullnode.full_nodes, font=LARGE_FONT)
-    pri.grid(row=2, column=1, columnspan=3)
+    pri.grid(row=8, column=0, columnspan=3)
 
 def addMe(self):
     host = '10.0.2.15'
@@ -186,6 +186,8 @@ def addMe(self):
     # fullnode.add_node('10.0.2.16')
     data = s.recv(1024)
     fullnode.add_node(data)
+    config['network']['seed_nodes'].append(host)
+    update();
     # c = s.accept()
     s.send(host)
     # print(fullnode.add_node(host))
@@ -206,7 +208,11 @@ def addMe(self):
 
 def callback2(self, pubK):
     pubK = tk.Label(self, text=config['user']['public_key'], font=LARGE_FONT)
-    pubK.grid(row=3, column=1, columnspan=3)
+    pubK.grid(row=2, column=1, columnspan=3)
+
+def sendPageBack(self):
+    # controller.show_frame(WalletPage)
+    self.destroy()
 
 def refresh():
     window.destroy()
@@ -227,11 +233,11 @@ class WalletPage(tk.Frame):
         networkConnect =tk.Button(self, text = "Connect To BlockGold Network: ", command=lambda: addMe(self))
         networkConnect.grid(row=5, column=3)
         sendcurrency = tk.Button(self, text="Send Nuggets: ", font=SMALL_FONT, command =lambda: controller.show_frame(SendPage))
-        sendcurrency.grid(row=1, column=0)
+        sendcurrency.grid(row=0, column=9)
         viewprivatekey = tk.Button(self, text="View my Private Key ", command=lambda: callback1(self, viewprivatekey))
-        viewprivatekey.grid(row=1, column=1, columnspan=3)
+        viewprivatekey.grid(row=1, column=1)
         viewpublickey = tk.Button(self, text="View my Public Key ", command=lambda: callback2(self, viewpublickey))
-        viewpublickey.grid(row=2, column=1, columnspan=3)
+        viewpublickey.grid(row=2, column=1)
         logout = tk.Button(self, text="logout", font=LARGE_FONT, command=lambda: controller.show_frame(StartPage))
         logout.grid(row=6, columnspan=3)
 
@@ -256,7 +262,7 @@ class SendPage(tk.Frame):
         AmmountTo1 = tk.Entry(self, bd=5)
         AmmountTo1.grid(row=2, column=1)
 
-        backbutton1 = tk.Button(self, text="Back", font=SMALL_FONT, command=lambda: controller.show_frame(WalletPage))
+        backbutton1 = tk.Button(self, text="Back", font=SMALL_FONT, command=lambda: controller.show_frame(WalletPage) )
         backbutton1.grid(row=4, columnspan=2)
 
         SendButton = tk.Button(self, text="Send", font =SMALL_FONT)

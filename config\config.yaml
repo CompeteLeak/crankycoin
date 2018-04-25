@@ -14,7 +14,7 @@ network:
   minimum_hash_difficulty: 4
   name: Cranky Coin
   nodes_url: http://{}:{}/nodes
-  seed_nodes: [127.0.0.1, 127.0.0.2, 127.0.0.3, 127.0.0.4, 137.198.12.190]
+  seed_nodes: [127.0.0.1, 127.0.0.2, 127.0.0.3, 127.0.0.4, 137.198.12.190, 10.0.2.15]
   significant_digits: 8
   status_url: http://{}:{}/status
   target_time_per_block: 600
