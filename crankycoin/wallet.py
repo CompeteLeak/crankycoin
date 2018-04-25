@@ -47,6 +47,8 @@ class Client(NodeMixin):
             pass
         return None
 
+
+
     def get_transaction_history(self, address=None, node=None):
         if address is None:
             address = self.get_public_key()

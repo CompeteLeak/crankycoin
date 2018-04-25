@@ -301,6 +301,7 @@ class FullNode(NodeMixin):
             self.full_nodes.add(host)
             config['network']['seed_nodes'].append(host)
             update()
+        
 
 
 
