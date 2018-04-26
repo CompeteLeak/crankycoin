@@ -77,8 +77,8 @@ def client():
             pass
 
 def connect():
-        # host = '10.0.2.15'
-        host =  '137.198.12.190'
+        host = '10.0.2.15'
+        # host =  '137.198.12.190'
         port = 5000
 
         ip = '10.0.2.15'
