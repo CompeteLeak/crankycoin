@@ -147,7 +147,45 @@ def full():
             if cmd_split[0] == "synchronize":
                 print(fullnode.synchronize())
             elif cmd_split[0] == "addpeer":
-                connect() 
+                # connect() 
+                host = '10.0.2.15'
+                # host =  '137.198.12.190'
+                port = 5000
+
+                ip = '10.0.2.15'
+                # print(ip)
+                public_key = config['user']['public_key']
+                # fullnode = FullNode(ip, public_key)
+                s = socket.socket()
+                s.bind((host, port))
+                myaddr = '137.198.12.190'
+
+                s.listen(1)
+                c, addr = s.accept()
+                # print(fullnode.add_node(host))
+                # print ("Got Conecttion From: " + str(addr))
+                c.send(myaddr)
+                data = c.recv(1024)
+                print("\n\n\n\n")
+                print(fullnode.full_nodes)
+                fullnode.add_node(data)
+                config['network']['seed_nodes'].append(data)
+                update()
+                print(fullnode.full_nodes)
+                print("Node Added" + str(data))
+        # data = s.recv(1024)
+        # fullnode.add_node(data)
+        # print(fullnode.add_node('10.0.2.15'))
+        # c.send(fullnode.add_node('137.198.12.190'))
+        # while True: 
+        #         data =c.recv(1024)
+        #         if not data:
+        #                 break
+        #         print ("from connected user: " + str(data))
+        #         data = str(data).upper()
+        #         print ("sending: " + str(data))
+        #         c.send(data)
+                c.close()
             elif cmd_split[0] == "addnode":
                 if len(cmd_split) == 2:
                     print(fullnode.add_node(cmd_split[1]))

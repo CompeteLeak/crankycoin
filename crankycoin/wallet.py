@@ -1,7 +1,9 @@
 import coincurve
 import random
 import requests
+import time
 
+from blockchain import *
 from config import *
 from node import NodeMixin
 from transaction import *
@@ -40,12 +42,22 @@ class Client(NodeMixin):
         if node is None:
             node = random.sample(self.full_nodes, 1)[0]
         url = self.BALANCE_URL.format(node, self.FULL_NODE_PORT, address)
-        try:
-            response = requests.get(url)
-            return response.json()
-        except requests.exceptions.RequestException as re:
-            pass
-        return None
+        #try:
+        transactions = config['network']['block_path']
+        nuggets = 0
+        for i in range(0, len(transactions)):
+            pointer = '{}'.format(transactions[i])
+            for j in range(0,len(bcinfo[pointer]['transactions'])):
+                if bcinfo[pointer]['transactions']['{}'.format(j)]['destination'] == config['user']['public_key']:
+                    nuggets = nuggets + bcinfo[pointer]['transactions']['{}'.format(j)]['amount']
+                elif bcinfo[pointer]['transactions']['{}'.format(j)]['source'] == config['user']['public_key']:
+                    nuggets = nuggets - bcinfo[pointer]['transactions']['{}'.format(j)]['amount']
+        #response = requests.get(url)
+        #return response.json()
+        return nuggets
+        # except requests.exceptions.RequestException as re:
+        #     pass
+        # return None
 
 
 
@@ -62,15 +74,25 @@ class Client(NodeMixin):
             pass
         return None
 
-    def create_transaction(self, to, amount, fee):
+    def update():
+        userdata = "config/config.yaml"
+        with open(userdata, "w") as f:
+            yaml.dump(config, f)
+
+    def create_transaction(self, to, amount):
         transaction = Transaction(
-            self.get_public_key(),
+            config['user']['public_key'],
             to,
             amount,
-            fee
+            0
         )
-        transaction.sign(self.get_private_key())
-        return self.broadcast_transaction(transaction)
+        currency = [transaction]
+        # transaction.sign(self.get_private_key())
+        # return self.broadcast_transaction(transaction)
+        blockchain = config['network']['block_path']
+        new_block = Block((len(blockchain)-1),currency, blockchain[-1], timestamp=int(time.time()))
+        config['network']['block_path'].append(new_block.current_hash)
+        update()
 
 
 if __name__ == "__main__":

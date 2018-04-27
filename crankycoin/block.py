@@ -20,7 +20,7 @@ class BlockHeader(object):
         return "{0:0>8}".format(self.version, 'x') + \
             self.previous_hash + \
             self.merkle_root + \
-            format(self.timestamp, 'x') + \
+            str(format(int(time.time()), 'x')) + \
             "{0:0>8}".format(self.nonce, 'x')
 
     def to_json(self):
@@ -60,6 +60,25 @@ class Block(object):
         merkle_root = self._calculate_merkle_root()
         self.block_header = BlockHeader(previous_hash, merkle_root, timestamp, nonce)
         self._current_hash = self._calculate_block_hash()
+
+        bc_header = '{}'.format(self._current_hash)
+
+        bc_info = {}
+
+        bc_info[bc_header] = {
+            'index': index,
+            'previous_hash': previous_hash,
+            'transactions':{},
+        }
+        for num in range(0, len(transactions)):
+            transac_info = {'{}'.format(num) : {'source': transactions[num].source, 'destination': transactions[num].destination, 'amount': transactions[num].amount}}
+            bc_info[bc_header]["transactions"].update(transac_info)
+        print("\n HI \n")
+        bcinfo.update(bc_info)
+        blockdata = "config/bcinfo.yaml"
+        with open(blockdata, 'w') as f:
+            yaml.dump(bcinfo, f)
+
 
     @property
     def index(self):

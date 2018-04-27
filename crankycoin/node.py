@@ -10,7 +10,7 @@ from config import *
 
 
 def update():
-    userdata = "config\config.yaml"
+    userdata = "config/config.yaml"
     with open(userdata, "w") as f:
         yaml.dump(config, f)
 
@@ -301,7 +301,6 @@ class FullNode(NodeMixin):
             self.full_nodes.add(host)
             config['network']['seed_nodes'].append(host)
             update()
-        
 
 
 
