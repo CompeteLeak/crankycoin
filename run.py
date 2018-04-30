@@ -120,6 +120,7 @@ def full():
         Available commands:
         ===================
         synchronize
+        addpeer <wait for node to join via P2P>
         addnode <host>
         getnodes
         loadblockchain <path/to/blockchain>

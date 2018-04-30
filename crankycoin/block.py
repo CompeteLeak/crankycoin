@@ -5,23 +5,39 @@ import pyscrypt
 
 from config import *
 from errors import *
+import datetime 
 
 
 class BlockHeader(object):
+
+    st = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
+
 
     def __init__(self, previous_hash, merkle_root, timestamp=None, nonce=0):
         self.version = config['network']['version']
         self.previous_hash = previous_hash
         self.merkle_root = merkle_root
         self.nonce = nonce
-        self.timestamp = timestamp if timestamp is not None else int(time.time())
+        self.timestamp = timestamp if timestamp is not None else time.time()
+        # self.timestamp = timestamp if timestamp is None return 'Null' else time.time()
+        # self.timestamp = time.time()
+        #self.timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
+
+    def myfunc(timestamp):
+        if not timestamp: 
+            return 'Null Value'
+            
 
     def to_hashable(self):
+        for v in 'version previous_hash merkle_root timestamp nonce'.split():
+            if getattr(self, v) is None:
+                print 'PANIC: %s is None' % v
+
         return "{0:0>8}".format(self.version, 'x') + \
             self.previous_hash + \
-            self.merkle_root + \
-            str(format(int(time.time()), 'x')) + \
+            "{0:0>8}".format(self.timestamp, 'x')  + \
             "{0:0>8}".format(self.nonce, 'x')
+            
 
     def to_json(self):
         return json.dumps(self, default=lambda o: {key.lstrip('_'): value for key, value in o.__dict__.items()},
