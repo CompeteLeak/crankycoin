@@ -8,6 +8,10 @@ from config import *
 from node import NodeMixin
 from transaction import *
 
+def update():
+    userdata = "config/config.yaml"
+    with open(userdata, "w") as f:
+        yaml.dump(config, f)
 
 class Client(NodeMixin):
 
@@ -74,10 +78,6 @@ class Client(NodeMixin):
             pass
         return None
 
-    def update():
-        userdata = "config/config.yaml"
-        with open(userdata, "w") as f:
-            yaml.dump(config, f)
 
     def create_transaction(self, to, amount):
         transaction = Transaction(
@@ -90,7 +90,7 @@ class Client(NodeMixin):
         # transaction.sign(self.get_private_key())
         # return self.broadcast_transaction(transaction)
         blockchain = config['network']['block_path']
-        new_block = Block((len(blockchain)-1),currency, blockchain[-1], timestamp=int(time.time()))
+        new_block = Block(0,currency, "")
         config['network']['block_path'].append(new_block.current_hash)
         update()
 

@@ -270,7 +270,7 @@ class SendPage(tk.Frame):
         backbutton1 = tk.Button(self, text="Back", font=SMALL_FONT, command=lambda: controller.show_frame(WalletPage) )
         backbutton1.grid(row=4, columnspan=2)
 
-        SendButton = tk.Button(self, text="Send", font =SMALL_FONT, command=lambda: sendNuggets(self, SendTo1, AmmountTo1))
+        SendButton = tk.Button(self, text="Send", font =SMALL_FONT, command=lambda: sendNuggets(self, SendTo1.get(), (int)(AmmountTo1.get())))
         SendButton.grid(row=5, columnspan=2)
 
         TransactionHistory = tk.Button(self, text = "Transaction History", font =SMALL_FONT, command =lambda: client.get_transaction_history())

@@ -1,6 +1,7 @@
 network:
   balance_url: http://{}:{}/address/{}/balance
-  block_path: [a406a7efcea5a7d4068d74e69e7bbe9fa5d33248b5697ef0b5fc7ee69b7b5e2a, b7b083fdfc91909531fd2a3a16f760f5ce5356b51e80f46783a5e5633f411823]
+  block_path: [a406a7efcea5a7d4068d74e69e7bbe9fa5d33248b5697ef0b5fc7ee69b7b5e2a, b7b083fdfc91909531fd2a3a16f760f5ce5356b51e80f46783a5e5633f411823,
+    66d6bd08c2f9cb69096f226157661f58c6ca6fc4b0c67bee514890240b3f1d83]
   block_url: http://{}:{}/block/{}
   blocks_range_url: http://{}:{}/blocks/{}/{}
   blocks_url: http://{}:{}/blocks/{}
@@ -14,8 +15,7 @@ network:
   minimum_hash_difficulty: 4
   name: Cranky Coin
   nodes_url: http://{}:{}/nodes
-  seed_nodes: !!set {10.0.2.15: null, 127.0.0.1: null, 127.0.0.2: null, 127.0.0.3: null,
-    127.0.0.4: null, 137.198.12.80: null}
+  seed_nodes: {127.0.0.1: null, 127.0.0.2: null, 127.0.0.3: null, 127.0.0.4: null}
   significant_digits: 8
   status_url: http://{}:{}/status
   target_time_per_block: 600

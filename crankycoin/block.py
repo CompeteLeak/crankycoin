@@ -91,6 +91,8 @@ class Block(object):
             bc_info[bc_header]["transactions"].update(transac_info)
         print("\n HI \n")
         bcinfo.update(bc_info)
+        print("\n\n")
+        print(bc_info)
         blockdata = "config/bcinfo.yaml"
         with open(blockdata, 'w') as f:
             yaml.dump(bcinfo, f)
