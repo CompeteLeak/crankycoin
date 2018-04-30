@@ -108,7 +108,7 @@ class LoginPage(tk.Frame):
 
 
 def update():
-    userdata = "config\config.yaml"
+    userdata = "config/config.yaml"
     with open(userdata, "w") as f:
         yaml.dump(config, f)
 
@@ -176,9 +176,12 @@ def callback1(self, priK):
 def viewPeers(self, pri):
     pri = tk.Label(self, text=fullnode.full_nodes, font=LARGE_FONT)
     pri.grid(row=8, column=0, columnspan=3)
+    config['network']['seed_nodes'] = fullnode.full_nodes
+    update();
 
 def addMe(self):
-    host = '10.0.2.15'
+    ip = '10.0.2.15'
+    host = '137.198.12.80'
     port = 5000
 
     s = socket.socket()
@@ -186,10 +189,10 @@ def addMe(self):
     # fullnode.add_node('10.0.2.16')
     data = s.recv(1024)
     fullnode.add_node(data)
-    config['network']['seed_nodes'].append(host)
-    update();
+    # config['network']['seed_nodes'].append(host)
+    # update();
     # c = s.accept()
-    s.send(host)
+    s.send(ip)
     # print(fullnode.add_node(host))
     # print(fullnode.full_nodes)
     # message = raw_input("-> ")
@@ -245,6 +248,8 @@ class WalletPage(tk.Frame):
         fresh.grid(row=7, columnspan=3)
 
 
+def sendNuggets(self, to, amount):
+    client.create_transaction(to, amount)
 
 class SendPage(tk.Frame):
     def __init__(self, parent, controller):
@@ -265,7 +270,7 @@ class SendPage(tk.Frame):
         backbutton1 = tk.Button(self, text="Back", font=SMALL_FONT, command=lambda: controller.show_frame(WalletPage) )
         backbutton1.grid(row=4, columnspan=2)
 
-        SendButton = tk.Button(self, text="Send", font =SMALL_FONT)
+        SendButton = tk.Button(self, text="Send", font =SMALL_FONT, command=lambda: sendNuggets(self, SendTo1.get(), (int)(AmmountTo1.get())))
         SendButton.grid(row=5, columnspan=2)
 
         TransactionHistory = tk.Button(self, text = "Transaction History", font =SMALL_FONT, command =lambda: client.get_transaction_history())
