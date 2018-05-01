@@ -103,7 +103,7 @@ class FullNode(NodeMixin):
             #print("\n\nThe Block path: %s" % self.blockchain)
         else:
             print("Old Block Path")
-            self.load_blockchain(block_path)
+            #self.load_blockchain(block_path)
 
         mining = kwargs.get("mining")
         if mining is True:
