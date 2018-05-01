@@ -1,11 +1,3 @@
-156dba56f6d8c9556875db06d51cea60eaf374e800575c8637a9c8249324f82b:
-  index: 0
-  previous_hash: ''
-  transactions:
-    '0': {amount: 500000, destination: 023326b3d4d9aa65f202920bb222611ad28b210093c9dff4fa1eb8787c1497941c,
-      source: '0'}
-    '1': {amount: 500000, destination: 023326b3d4d9aa65f202920bb222611ad28b210093c9dff4fa1eb8787c1497941c,
-      source: '0'}
 4a7016b632c8924a5de8cfacfc3ec5b521b89988a1c09293312b4be9cdaad720:
   index: 0
   previous_hash: ''
@@ -23,7 +15,7 @@ a406a7efcea5a7d4068d74e69e7bbe9fa5d33248b5697ef0b5fc7ee69b7b5e2a:
   transactions:
     '0': {amount: 500000, destination: 03dcbe41c81b883811d09eb93c55ddbee24543709fcb813155a249595de8163b18,
       source: '0'}
-    '1': {amount: 500000, destination: 023326b3d4d9aa65f202920bb222611ad28b210093c9dff4fa1eb8787c1497941c,
+    '1': {amount: 500000, destination: 038102405578799d023b01b9da33aff7abeb4fbaf082be6169b2122f13ec1d5f05,
       source: '0'}
 b7b083fdfc91909531fd2a3a16f760f5ce5356b51e80f46783a5e5633f411823:
   index: 0
@@ -34,11 +26,3 @@ b7b083fdfc91909531fd2a3a16f760f5ce5356b51e80f46783a5e5633f411823:
     '1': {amount: 500000, destination: 023326b3d4d9aa65f202920bb222611ad28b210093c9dff4fa1eb8787c1497941c,
       source: '0'}
 block_path: []
-fa64857e9a6ab6fb1c9ceae2f53ac942f0abcd16a94149bc07c6e8532d247db0:
-  index: 0
-  previous_hash: ''
-  transactions:
-    '0': {amount: 500000, destination: 023326b3d4d9aa65f202920bb222611ad28b210093c9dff4fa1eb8787c1497941c,
-      source: '0'}
-    '1': {amount: 500000, destination: 023326b3d4d9aa65f202920bb222611ad28b210093c9dff4fa1eb8787c1497941c,
-      source: '0'}

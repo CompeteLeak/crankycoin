@@ -6,6 +6,7 @@ import pyscrypt
 from config import *
 from errors import *
 import datetime 
+import socket
 
 
 class BlockHeader(object):
@@ -90,7 +91,7 @@ class Block(object):
             
             transac_info = {'{}'.format(num) : {'source': transactions[num].source, 'destination': transactions[num].destination, 'amount': transactions[num].amount}}
             bc_info[bc_header]["transactions"].update(transac_info)
-            host = '10.0.2.15'
+            host = '137.198.12.190'
             # host =  '137.198.12.190'
             port = 5000
 

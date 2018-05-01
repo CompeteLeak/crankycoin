@@ -17,6 +17,7 @@ import socket
 # from node import NodeMixin
 # from transaction import *
 
+
 LARGE_FONT = ("Verdona", 12)
 SMALL_FONT = ("Verdona", 8)
 # ip = config['user']['ip']
@@ -25,17 +26,16 @@ ip = '10.0.2.15'
 # print(ip)
 public_key = config['user']['public_key']
 fullnode = FullNode(ip, public_key)
-# window = Tk()
+
 
 
 class BlockGold(tk.Tk):
-
     # Code in this class baseline code to start basic gui
     def __init__(self, *args, **kwargs):
-
+        
         tk.Tk.__init__(self, *args, **kwargs)
+  
         container = tk.Frame(self)
-
         container.pack(side="top", fill="both", expand=True)
 
         container.grid_rowconfigure(0, weight=1)
@@ -57,20 +57,29 @@ class BlockGold(tk.Tk):
 
         frame = self.frames[cont]
         frame.tkraise()
-
+        frame.configure(background="#000000", borderwidth="2", width="506")
 
 class StartPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        label = tk.Label(self, text="N U G G E T S", font=LARGE_FONT)
+        label = tk.Label(self, text="N U G G E T S", background="#000000", font='Helvetica 24 bold', foreground="#ffff00")
         label.pack(pady=10, padx=10)
 
-        loginbutton = tk.Button(self, text="Login", font=LARGE_FONT, command=lambda: controller.show_frame(LoginPage))
-        loginbutton.pack()
+        label = tk.Label(self, text="Passphrase", background="#000000", font='Helvetica 12 bold', foreground="#ffff00")
+        label.pack()
+
+        passphrase = tk.Entry(self)
+    #EE  passphrase.place(relx=0.38, rely=0.39, height=30, relwidth=0.46)
+        passphrase.pack()
+
+        loginbutton = tk.Button(self, text="Login", font=LARGE_FONT, command=lambda: login(self, passphrase, controller))
+        loginbutton.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        loginbutton.pack(padx=5, pady=10)
 
         newuserbutton = tk.Button(self, text="New User", font=SMALL_FONT, command=lambda:
         controller.show_frame(NewUserPage))
-        newuserbutton.pack()
+        newuserbutton.configure(background="#ffff00", borderwidth="5", highlightcolor="black", pady="0")
+        newuserbutton.pack(padx=5, pady=10)
 
 
 def login(self, passphrase, controller):
@@ -144,9 +153,9 @@ class NewUserPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
 
-        label2 = tk.Label(self, text="Passphrase", font=LARGE_FONT)
+        label2 = tk.Label(self, text="Passphrase", background="#000000", font='Helvetica 12 bold', foreground="#ffff00")
         label2.grid(row=0, column=0)
-        label3 = tk.Label(self, text="Re-Enter Passphrase", font=LARGE_FONT)
+        label3 = tk.Label(self, text="Re-Enter Passphrase", background="#000000", font='Helvetica 12 bold', foreground="#ffff00")
         label3.grid(row=1, column=0)
 
         newpassphrase = tk.Entry(self, bd=5)
@@ -155,23 +164,39 @@ class NewUserPage(tk.Frame):
         confirm.grid(row=1, column=1)
         enterbutton = tk.Button(self, text="Enter", font=LARGE_FONT,
                                 command=lambda: encrypt(newpassphrase, confirm, self, controller))
+        enterbutton.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
         enterbutton.grid(row=2, columnspan=2)
         backbutton1 = tk.Button(self, text="Back", font=SMALL_FONT, command=lambda: controller.show_frame(StartPage))
+        backbutton1.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
         backbutton1.grid(row=4, columnspan=2)
 
 
 def callback(self, balance):
+    # host = '10.0.2.15'
+    # port = 5000 
+
+    # s=socket.socket()
+    # s.connect((host, port))
+
+    # trans = s.recv(1024)
+    
+    # config[user][block_path].append(trans)
+    # update()
+
+    # print('Received updated Transaction')
+    # s.close()
     amount = client.get_balance()
     if amount is None:
         amount = 0
     balance = tk.Label(self, text=str(amount)+" Nugget(s)", font=LARGE_FONT)
-    balance.grid(row=0, column=0)
+    balance.grid(row=0, rowspan = 2, column=0)
+
 
 
 
 def callback1(self, priK):
     priK = tk.Label(self, text=config['user']['encrypted_private_key'], font=LARGE_FONT)
-    priK.grid(row=1, column=1, columnspan=3)
+    priK.grid(row=0, column=1, columnspan=3)
 
 def viewPeers(self, pri):
     pri = tk.Label(self, text=fullnode.full_nodes, font=LARGE_FONT)
@@ -211,7 +236,7 @@ def addMe(self):
 
 def callback2(self, pubK):
     pubK = tk.Label(self, text=config['user']['public_key'], font=LARGE_FONT)
-    pubK.grid(row=2, column=1, columnspan=3)
+    pubK.grid(row=1, column=1, columnspan=3)
 
 def sendPageBack(self):
     # controller.show_frame(WalletPage)
@@ -231,21 +256,28 @@ class WalletPage(tk.Frame):
         #cmd_split = cmd.split()
         #
         balance = tk.Button(self, text="Balance", command=lambda: callback(self, balance))
-        balance.grid(row=0, column=0)
+        balance.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        balance.grid(row = 0, rowspan=2, column=0)
 
         networkConnect =tk.Button(self, text = "Connect To BlockGold Network: ", command=lambda: addMe(self))
-        networkConnect.grid(row=5, column=3)
+        networkConnect.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        networkConnect.grid(row=2, column=0)
         sendcurrency = tk.Button(self, text="Send Nuggets: ", font=SMALL_FONT, command =lambda: controller.show_frame(SendPage))
-        sendcurrency.grid(row=0, column=9)
+        sendcurrency.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        sendcurrency.grid(row=2, column=1)
         viewprivatekey = tk.Button(self, text="View my Private Key ", command=lambda: callback1(self, viewprivatekey))
-        viewprivatekey.grid(row=1, column=1)
+        viewprivatekey.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        viewprivatekey.grid(row=0, column=1)
         viewpublickey = tk.Button(self, text="View my Public Key ", command=lambda: callback2(self, viewpublickey))
-        viewpublickey.grid(row=2, column=1)
+        viewpublickey.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        viewpublickey.grid(row=1, column=1)
         logout = tk.Button(self, text="logout", font=LARGE_FONT, command=lambda: controller.show_frame(StartPage))
-        logout.grid(row=6, columnspan=3)
+        logout.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        logout.grid(row=4, columnspan=3)
 
         fresh = tk.Button(self, text="Refresh", font=LARGE_FONT, command=lambda: refresh())
-        fresh.grid(row=7, columnspan=3)
+        fresh.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        fresh.grid(row=5, columnspan=3)
 
 
 def sendNuggets(self, to, amount):
@@ -278,36 +310,67 @@ def sendNuggets(self, to, amount):
     print("Transaction Updated")
     s.close()
 
+def get_transaction_history(self):
+    text = tk.StringVar()
+    text_widget = tk.Label(self, textvariable = text)
+    text_widget.grid(row = 0, column = 2, rowspan = 4)
+    empty = True
+
+    transactions = config['network']['block_path']
+    for i in range(0, len(transactions)):
+        pointer = '{}'.format(transactions[i])
+        for j in range(0,len(bcinfo[pointer]['transactions'])):
+            if bcinfo[pointer]['transactions']['{}'.format(j)]['destination'] == config['user']['public_key']:
+                s = text.get()
+                s = (str)("Recieved " + (str)(bcinfo[pointer]['transactions']['{}'.format(j)]['amount']) + " nugget(s) from " + bcinfo[pointer]['transactions']['{}'.format(j)]['source'] + "\n")
+                text.set(s)
+                empty = False
+            elif bcinfo[pointer]['transactions']['{}'.format(j)]['source'] == config['user']['public_key']:
+                s = text.get()
+                s = (str)("Sent " + (str)(bcinfo[pointer]['transactions']['{}'.format(j)]['amount']) + " nugget(s) from " + bcinfo[pointer]['transactions']['{}'.format(j)]['destination'] + "\n")
+                text.set(s)
+                empty = False
+
+        if empty is True:
+            s = text.get()
+            s = ("No Transaction History")
+            text.set(s)
+
 class SendPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent,)
 
-        SendTo = tk.Label(self, text="Send Nuggets To This Public Key: ")
+        SendTo = tk.Label(self, background="#000000", font='Helvetica 12 bold', foreground="#ffff00", text="Send Nuggets To This Public Key: ")
         SendTo.grid(row=0, column=0)
 
         SendTo1 = tk.Entry(self, bd=5)
         SendTo1.grid(row=0, column=1)
 
-        AmmountTo = tk.Label(self, text="Enter Nuggets Amount to send: ")
+        AmmountTo = tk.Label(self, background="#000000", font='Helvetica 12 bold', foreground="#ffff00",text="Enter Nuggets Amount to send: ")
         AmmountTo.grid(row=2, column=0)
 
         AmmountTo1 = tk.Entry(self, bd=5)
         AmmountTo1.grid(row=2, column=1)
 
         backbutton1 = tk.Button(self, text="Back", font=SMALL_FONT, command=lambda: controller.show_frame(WalletPage) )
-        backbutton1.grid(row=4, columnspan=2)
+        backbutton1.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        backbutton1.grid(row=5, columnspan=2)
 
         SendButton = tk.Button(self, text="Send", font =SMALL_FONT, command=lambda: sendNuggets(self, SendTo1.get(), (int)(AmmountTo1.get())))
-        SendButton.grid(row=5, columnspan=2)
+        SendButton.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        SendButton.grid(row=4, columnspan=2)
 
-        TransactionHistory = tk.Button(self, text = "Transaction History", font =SMALL_FONT, command =lambda: client.get_transaction_history())
-        TransactionHistory.grid(row = 6, column = 2)
+        TransactionHistory = tk.Button(self, text = "Transaction History", font =SMALL_FONT, command =lambda: get_transaction_history(self))
+        TransactionHistory.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        TransactionHistory.grid(row = 5, column = 2)
         viewP = tk.Button(self, text="View Peers on the network ", command=lambda: viewPeers(self, viewP))
-        viewP.grid(row=8, column=0, columnspan=3)
+        viewP.configure(background="#ffff00", borderwidth="5", highlightcolor="white", pady="0")
+        viewP.grid(row=6, column=0, columnspan=3)
 
 
 
 
 
 app = BlockGold()
+app.title("BlockGold")
 app.mainloop()

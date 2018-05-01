@@ -2,6 +2,7 @@ import coincurve
 import random
 import requests
 import time
+import Tkinter as tk
 
 from blockchain import *
 from config import *
@@ -65,18 +66,23 @@ class Client(NodeMixin):
 
 
 
-    def get_transaction_history(self, address=None, node=None):
-        if address is None:
-            address = self.get_public_key()
-        if node is None:
-            node = random.sample(self.full_nodes, 1)[0]
-        url = self.TRANSACTION_HISTORY_URL.format(node, self.FULL_NODE_PORT, address)
-        try:
-            response = requests.get(url)
-            return response.json()
-        except requests.exceptions.RequestException as re:
-            pass
-        return None
+    # def get_transaction_history(self):
+    #     text = tk.StringVar()
+    #     text_widget = tk.Label(self, textvariable = text)
+    #     text_widget.grid(row = 0, column = 3, rowspan = 6)
+
+    #     transactions = config['network']['block_path']
+    #     for i in range(0, len(transactions)):
+    #         pointer = '{}'.format(transactions[i])
+    #         for j in range(0,len(bcinfo[pointer]['transactions'])):
+    #             if bcinfo[pointer]['transactions']['{}'.format(j)]['destination'] == config['user']['public_key']:
+    #                 s = text.get()
+    #                 s = (String)("Recieved " + bcinfo[pointer]['transactions']['{}'.format(j)]['amount'] + " nugget(s) from " + bcinfo[pointer]['transactions']['{}'.format(j)]['source'] + "\n")
+    #                 text.set(s)
+    #             elif bcinfo[pointer]['transactions']['{}'.format(j)]['source'] == config['user']['public_key']:
+    #                 s = text.get()
+    #                 s = (String)("Sent " + bcinfo[pointer]['transactions']['{}'.format(j)]['amount'] + " nugget(s) from " + bcinfo[pointer]['transactions']['{}'.format(j)]['destination'] + "\n")
+    #                 text.set(s)
 
 
     def create_transaction(self, to, amount):
