@@ -250,6 +250,33 @@ class WalletPage(tk.Frame):
 
 def sendNuggets(self, to, amount):
     client.create_transaction(to, amount)
+    ip = '10.0.2.15'
+    host = '137.198.12.80'
+    port = 5000
+
+    s = socket.socket()
+    s.connect((host, port))
+    # fullnode.add_node('10.0.2.16')
+    #data = s.recv(1024)
+    # fullnode.add_node(data)
+    # config['network']['seed_nodes'].append(host)
+    # update();
+    # c = s.accept()
+    s.send(client.create_transaction(to, amount))
+    # print(fullnode.add_node(host))
+    # print(fullnode.full_nodes)
+    # message = raw_input("-> ")
+    # if message == 'a ':
+            # fullnode.add_node('10.0.2.16')
+            # print("node sucesfuly added" + str(fullnode.full_nodes))
+    #         s.close()
+    # while message != 'q ':
+    #         s.send(message)
+    #         data = s.recv(1024)
+    #         print ('Received from server' + str(data))
+    #         message = raw_input("->")
+    print("Transaction Updated")
+    s.close()
 
 class SendPage(tk.Frame):
     def __init__(self, parent, controller):

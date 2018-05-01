@@ -1,7 +1,7 @@
 network:
   balance_url: http://{}:{}/address/{}/balance
   block_path: [a406a7efcea5a7d4068d74e69e7bbe9fa5d33248b5697ef0b5fc7ee69b7b5e2a, b7b083fdfc91909531fd2a3a16f760f5ce5356b51e80f46783a5e5633f411823,
-    66d6bd08c2f9cb69096f226157661f58c6ca6fc4b0c67bee514890240b3f1d83]
+    66d6bd08c2f9cb69096f226157661f58c6ca6fc4b0c67bee514890240b3f1d83, 4a7016b632c8924a5de8cfacfc3ec5b521b89988a1c09293312b4be9cdaad720]
   block_url: http://{}:{}/block/{}
   blocks_range_url: http://{}:{}/blocks/{}/{}
   blocks_url: http://{}:{}/blocks/{}

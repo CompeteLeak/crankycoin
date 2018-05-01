@@ -87,10 +87,38 @@ class Block(object):
             'transactions':{},
         }
         for num in range(0, len(transactions)):
+            
             transac_info = {'{}'.format(num) : {'source': transactions[num].source, 'destination': transactions[num].destination, 'amount': transactions[num].amount}}
             bc_info[bc_header]["transactions"].update(transac_info)
+            host = '10.0.2.15'
+            # host =  '137.198.12.190'
+            port = 5000
+
+            ip = '10.0.2.15'
+            # print(ip)
+            #public_key = config['user']['public_key']
+            # fullnode = FullNode(ip, public_key)
+            s = socket.socket()
+            s.bind((host, port))
+            myaddr = '137.198.12.190'
+
+            s.listen(1)
+            c, addr = s.accept()
+            # print(fullnode.add_node(host))
+            # print ("Got Conecttion From: " + str(addr))
+            #c.send(myaddr)
+            data = c.recv(1024)
+            print("\n\n\n\n")
+            #print(fullnode.full_nodes)
+            #fullnode.add_node(data)
+            #config['network']['seed_nodes'].append(data)
+            #update()
+            #print(fullnode.full_nodes)
+            #print("Node Added" + str(data))
+
         print("\n HI \n")
         bcinfo.update(bc_info)
+        bcinfo.update(data)
         print("\n\n")
         print(bc_info)
         blockdata = "config/bcinfo.yaml"
